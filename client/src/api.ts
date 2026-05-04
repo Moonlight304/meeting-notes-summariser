@@ -10,7 +10,7 @@ export const uploadDocument = async (text: string | null, file: File | null, ses
     if (file) formData.append('file', file);
     if (sessionId) formData.append('session_id', sessionId);
 
-    const response = await axios.post(`${API_URL}/upload`, formData, {
+    const response = await axios.post(`${API_URL}/api/upload`, formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
         }
@@ -19,7 +19,7 @@ export const uploadDocument = async (text: string | null, file: File | null, ses
 };
 
 export const sendChatMessage = async (sessionId: string, message: string) => {
-    const response = await axios.post(`${API_URL}/chat`, {
+    const response = await axios.post(`${API_URL}/api/chat`, {
         session_id: sessionId,
         message: message
     });
@@ -27,6 +27,6 @@ export const sendChatMessage = async (sessionId: string, message: string) => {
 };
 
 export const getHistory = async (sessionId: string) => {
-    const response = await axios.get(`${API_URL}/history/${sessionId}`);
+    const response = await axios.get(`${API_URL}/api/history/${sessionId}`);
     return response.data;
 };
