@@ -1,6 +1,6 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_chroma import Chroma
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage
 from core.config import settings
@@ -70,10 +70,6 @@ def query_summarizer(question: str, session_id: str = None) -> dict:
         "Focus on highlighting decisions, action items, and key discussions based on the content.\n\n"
         f"CONTEXT:\n{context_text}"
     )
-
-    print('\n ------- CONTEXT TEXT --------- \n')
-    print(context_text)
-    print('\n ------- CONTEXT TEXT --------- \n')
 
 
     try:

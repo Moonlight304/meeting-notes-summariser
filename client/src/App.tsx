@@ -188,7 +188,7 @@ function App() {
     };
 
     return (
-        <div className="bg-red-500 flex w-screen h-screen bg-slate-50 text-slate-800 font-sans overflow-hidden">
+        <div className="flex w-screen h-screen bg-slate-50 text-slate-800 font-sans overflow-hidden">
             {/* Sidebar UI styled with Tailwind */}
             <div className="w-72 border-r border-slate-200 flex flex-col p-6 bg-white">
                 <h2 className="text-xl font-semibold mb-8 text-slate-900 tracking-tight">Summarizer</h2>

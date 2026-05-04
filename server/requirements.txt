@@ -9,6 +9,8 @@ langchain-text-splitters
 langchain-community
 langchain-google-genai
 langchain-core
+langchain-chroma
+langchain-huggingface
 google-generativeai
 chromadb
 sentence-transformers
